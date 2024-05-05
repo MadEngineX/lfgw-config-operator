@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- controls_v1alpha1_acl.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

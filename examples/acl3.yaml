@@ -1,0 +1,11 @@
+apiVersion: controls.lfgw.io/v1alpha1
+kind: ACL
+metadata:
+  name: example-acl
+  namespace: test3
+spec:
+  rules:
+    - roleName: "wallet-dev-ro"
+      namespaceFilter: "wallet-dev"
+    - roleName: "wallet-dev-rw"
+      namespaceFilter: "wallet-dev"

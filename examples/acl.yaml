@@ -1,0 +1,12 @@
+apiVersion: controls.lfgw.io/v1alpha1
+kind: ACL
+metadata:
+  name: example-acl
+  namespace: test
+spec:
+  rules:
+    - roleName: "admin"
+      namespaceFilter: ".*"
+    - roleName: "bots-dev-ro"
+      namespaceFilter: "bots-dev"
+      

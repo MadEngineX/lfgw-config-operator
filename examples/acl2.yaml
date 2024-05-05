@@ -1,0 +1,11 @@
+apiVersion: controls.lfgw.io/v1alpha1
+kind: ACL
+metadata:
+  name: test-acl
+  namespace: test2
+spec:
+  rules:
+    - roleName: "wallet-stage-ro"
+      namespaceFilter: "wallet-stage"
+    - roleName: "wallet-stage-rw"
+      namespaceFilter: "wallet-stage"

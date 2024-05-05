@@ -1,0 +1,12 @@
+apiVersion: controls.lfgw.io/v1alpha1
+kind: ACL
+metadata:
+  labels:
+    app.kubernetes.io/name: acl
+    app.kubernetes.io/instance: acl-sample
+    app.kubernetes.io/part-of: lfgw-config-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: lfgw-config-operator
+  name: acl-sample
+spec:
+  # TODO(user): Add fields here

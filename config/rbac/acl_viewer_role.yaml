@@ -1,0 +1,27 @@
+# permissions for end users to view acls.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: acl-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: lfgw-config-operator
+    app.kubernetes.io/part-of: lfgw-config-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: acl-viewer-role
+rules:
+- apiGroups:
+  - controls.lfgw.io
+  resources:
+  - acls
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - controls.lfgw.io
+  resources:
+  - acls/status
+  verbs:
+  - get
