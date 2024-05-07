@@ -1,12 +1,8 @@
-apiVersion: controls.lfgw.io/v1alpha1
-kind: ACL
+apiVersion: v1
+kind: ConfigMap
 metadata:
-  name: example-acl
-  namespace: test
-spec:
-  rules:
-    - roleName: "admin"
-      namespaceFilter: ".*"
-    - roleName: "bots-dev-ro"
-      namespaceFilter: "bots-dev"
-      
+  namespace: read-env
+  name: some-configmap
+data:
+  DB_USER: dev-user
+  DB_PASSWORD: qwerty

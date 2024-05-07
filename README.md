@@ -42,6 +42,25 @@ kubectl apply -f config/crd/bases
 
 **Deploy operator**
 
+Install CRD:
+```bash
+kubectl apply -f https://raw.githubusercontent.com/MadE
+ngineX/lfgw-config-operator/main/config/crd/bases/controls.lfgw.io_acls.yaml
+```
+
+Deploy as Helm release:
+```bash 
+helm repo add m8x https://MadEngineX.github.io/helm-charts/
+helm repo update
+
+helm upgrade --install lfgw-operator m8x/lfgw-operator-chart 
+```
+
+See all possible [values](https://github.com/MadEngineX/helm-charts/blob/main/charts/lfgw-operator-chart/values.yaml).
+
+You can also deploy __lfgw-config-operator__ + __LFGW__ from one Helm Chart: -
+- https://github.com/MadEngineX/helm-charts/tree/main/charts/lfgw
+
 ## Docker images
 
 Docker images are published on Dockerhub: [ksxack/lfgw-config-operator](https://hub.docker.com/r/ksxack/lfgw-config-operator/tags)

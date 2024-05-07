@@ -120,7 +120,7 @@ func (r *ACLReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.R
 
 	r.updateStatus(log, ctx, &desiredResource, &v1alpha1.ACLStatus{Code: "SYNCED", Message: "ACL added to ConfigMap"})
 
-	return ctrl.Result{RequeueAfter: 20 * time.Second}, nil
+	return ctrl.Result{RequeueAfter: 30 * time.Second}, nil
 }
 
 // SetupWithManager sets up the controller with the Manager.
