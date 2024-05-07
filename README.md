@@ -44,8 +44,7 @@ kubectl apply -f config/crd/bases
 
 Install CRD:
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/MadE
-ngineX/lfgw-config-operator/main/config/crd/bases/controls.lfgw.io_acls.yaml
+kubectl apply -f https://raw.githubusercontent.com/MadEngineX/lfgw-config-operator/main/config/crd/bases/controls.lfgw.io_acls.yaml
 ```
 
 Deploy as Helm release:
