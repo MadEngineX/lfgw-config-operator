@@ -1,7 +1,7 @@
 apiVersion: controls.lfgw.io/v1alpha1
 kind: ACL
 metadata:
-  name: test-acl
+  name: test-acl2
   namespace: test2
 spec:
   rules:

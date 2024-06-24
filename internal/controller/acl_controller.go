@@ -267,7 +267,7 @@ func (r *ACLReconciler) updateConfigMapObject(filename string, configmap *corev1
 	switch mode {
 	case appendItem:
 		for _, rule := range resource.Spec.Rules {
-			if !strings.Contains(configmap.Data[filename], rule.RoleName+": "+rule.NamespaceFilter) {
+			if !strings.Contains(configmap.Data[filename], rule.RoleName) {
 				aclList += rule.RoleName + ": " + rule.NamespaceFilter + "\n"
 				updateNeeded = true
 			}

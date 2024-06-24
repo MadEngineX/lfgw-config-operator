@@ -69,7 +69,7 @@ spec:
               code:
                 enum:
                 - SYNCED
-                - ERROR'
+                - ERROR
                 type: string
               message:
                 type: string

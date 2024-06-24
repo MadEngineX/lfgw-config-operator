@@ -1,8 +1,9 @@
-apiVersion: v1
-kind: ConfigMap
+apiVersion: controls.lfgw.io/v1alpha1
+kind: ACL
 metadata:
-  namespace: read-env
-  name: some-configmap
-data:
-  DB_USER: dev-user
-  DB_PASSWORD: qwerty
+  name: test-acl
+  namespace: test2
+spec:
+  rules:
+    - roleName: "wallet-preprod-ro"
+      namespaceFilter: "wallet-preprod"
